@@ -103,11 +103,11 @@ This fetches the latest prices for Gold, Bitcoin, and the S&P 500 and stores the
 
 ---
 
-## ⏰ Schedule Hourly Updates with Cron
+## ⏰ Schedule Updates every minute with Cron
 
-📄 See [`cron_schedule.txt`]() for the recommended hourly cron job configuration.
+📄 See [`cron_schedule.txt`](https://github.com/dorisavedikian/market_tracker/blob/main/cron_schedule.txt) for the recommended hourly cron job configuration.
 
-To run the script every hour:
+To run the script every minute:
 
 ```bash
 crontab -e
@@ -136,27 +136,6 @@ You can deploy your Streamlit app to the web for free using [Streamlit Cloud](ht
 3. Connect your GitHub repo
 4. Set the main file to `market_dashboard.py`
 5. (Optional) Use hosted MySQL like [PlanetScale](https://planetscale.com/) for remote access
-
----
-
-## 📦 Requirements
-
-Install all dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-**`requirements.txt` includes:**
-
-```
-pandas
-requests
-yfinance
-SQLAlchemy
-pymysql
-streamlit
-```
 
 ---
 
