@@ -2,7 +2,8 @@ import yfinance as yf
 import requests
 import pandas as pd
 from sqlalchemy import create_engine
-from datetime import datetime
+from datetime import datetime, timezone
+
 
 # Collect market prices
 data_rows = []
@@ -22,7 +23,7 @@ data_rows.append(("Bitcoin", "BTC", float(btc_price)))
 
 # Create DataFrame and insert into MySQL
 df = pd.DataFrame(data_rows, columns=["asset", "symbol", "price_usd"])
-df["timestamp"] = datetime.utcnow()
+df["timestamp"] = datetime.now(timezone.utc)
 
 engine = create_engine("mysql+pymysql://marketuser:marketpass@localhost:3306/market_db")
 df.to_sql("market_prices", con=engine, if_exists="append", index=False)

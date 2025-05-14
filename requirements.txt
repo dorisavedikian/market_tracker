@@ -4,3 +4,4 @@ SQLAlchemy
 pymysql
 yfinance
 streamlit
+cryptography

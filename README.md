@@ -99,22 +99,18 @@ Run the data collection script manually:
 python fetch_market_data.py
 ```
 
-This fetches prices for Gold, Bitcoin, and the S&P 500 and inserts them into your MySQL table.
+This fetches the latest prices for Gold, Bitcoin, and the S&P 500 and stores them in MySQL using UTC timestamps.
 
 ---
 
 ## ⏰ Schedule Hourly Updates with Cron
 
+📄 See [`cron_schedule.txt`]() for the recommended hourly cron job configuration.
+
 To run the script every hour:
 
 ```bash
 crontab -e
-```
-
-Add this line (replace paths with your actual full paths):
-
-```
-0 * * * * /full/path/to/venv/bin/python /full/path/to/market_tracker/fetch_market_data.py >> /tmp/market_log.txt 2>&1
 ```
 
 ---
