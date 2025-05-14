@@ -70,7 +70,7 @@ brew install mysql
 brew services start mysql
 ```
 
-#### Log in as root and create user/database/table
+#### Log in as root (>> mysql -u root) and create user/database/table than >> exit;
 
 ```sql
 CREATE DATABASE market_db;

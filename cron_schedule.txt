@@ -1,5 +1,4 @@
 # Runs fetch_market_data.py every hour on the hour
 # update with YOUR paths
 
-
-0 * * * * /full/path/to/venv/bin/python /full/path/to/market_tracker/fetch_market_data.py >> /tmp/market_log.txt 2>&1
+* * * * * /full/path/to/venv/bin/python /full/path/to/market_tracker/fetch_market_data.py >> /tmp/market_log.txt 2>&1
